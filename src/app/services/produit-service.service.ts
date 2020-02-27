@@ -42,7 +42,7 @@ getProducts() {
 }
 insertProduct(produit) {
   console.log(produit);
-  return this.http.post<Produit>(this.url, produit);
+  return this.http.post(this.url, produit);
 }
 updateProduct(produit: Produit) {
   return this.http.put(`${this.url}/${produit.id}`, produit);

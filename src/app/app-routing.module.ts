@@ -8,6 +8,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 const routes: Routes =[
     { path: '', redirectTo: '/', pathMatch: 'full'},
     { path: 'addproduct',  component: ProduitComponent},
+    { path: 'editproduct',  component: ProduitComponent},
     { path: 'listproduct',  component: ProductListComponent},
 ];
 

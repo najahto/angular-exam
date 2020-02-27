@@ -1,53 +1,54 @@
 <div class="container-fluid">
-<form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
-    <mat-grid-list cols="1" rowHeight="500px">
-       
-        <mat-grid-tile>
-            <div class="controles-container">
-                <input type="hidden" formControlName="id">
-                    <mat-form-field>
-                        <input formControlName="nom" matInput  placeholder="nom">
-                        <mat-error>this field is mandatory</mat-error>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input formControlName="nom_court" matInput  placeholder="nom court">
-                        <mat-error>this field is mandatory</mat-error>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input formControlName="prix_de_bas" matInput  placeholder="prix de base">
-                        <mat-error>this field is mandatory</mat-error>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input formControlName="prix_de_vente" matInput  placeholder="prix de vente">
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input formControlName="image" matInput  placeholder="image">
-                    </mat-form-field>
-                    <div class="controles-container">
-                        <div class="add-bottom-padding">
-                            <mat-form-field>
-                                <input formControlName="remise" matInput  placeholder="remise">
-                            </mat-form-field>
-                        </div>    
-                        <mat-form-field>
-                            <input formControlName="unite" matInput  placeholder="Unite">
-                        </mat-form-field>
-                        <mat-form-field>
-                            <input formControlName="quantite_initial" matInput  placeholder="quantite initial">
-                        </mat-form-field>
-                        <mat-form-field>
-                            <input formControlName="quantite_en_stock" matInput  placeholder="quantite en stock">
-                        </mat-form-field>
-                            <div  class="button-row">
-                                <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
-                                <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
-                            </div>
-                    </div>
-            </div>
-        </mat-grid-tile>
-       
+    <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+        <mat-grid-list cols="1" rowHeight="500px">
            
-        
-      </mat-grid-list>
-</form>
-</div>
+            <mat-grid-tile>
+                <div class="controles-container">
+                    <input type="hidden" name="id" formControlName="id">
+                        <mat-form-field>
+                            <input name="nom" formControlName="nom" matInput  placeholder="nom">
+                            <mat-error>this field is mandatory</mat-error>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input name="nom_court" formControlName="nom_court" matInput  placeholder="nom court">
+                            <mat-error>this field is mandatory</mat-error>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input name="prix_de_bas" formControlName="prix_de_bas" matInput  placeholder="prix de base">
+                            <mat-error>this field is mandatory</mat-error>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input name="prix_de_vente" formControlName="prix_de_vente" matInput  placeholder="prix de vente">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input name="image" formControlName="image" matInput  placeholder="image">
+                        </mat-form-field>
+                         <div class="controles-container">
+                    
+                        <mat-form-field>
+                            <input name="remise" formControlName="remise" matInput  placeholder="remise">
+                        </mat-form-field>
+                       
+                    <mat-form-field>
+                        <input name="un" formControlName="unite" matInput  placeholder="Unite">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input name="quantite_initial" formControlName="quantite_initial" matInput  placeholder="quantite initial">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input name="quantite_en_stock" formControlName="quantite_en_stock" matInput  placeholder="quantite en stock">
+                    </mat-form-field>
+                        <div  class="button-row">
+                            <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
+                            <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+                        </div>
+                </div>
+                </div>
+            </mat-grid-tile>
+           
+               
+            
+          </mat-grid-list>
+    </form>
+    </div>
+    
