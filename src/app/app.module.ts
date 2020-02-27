@@ -9,13 +9,17 @@ import { MaterialModule } from './material/material/material.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ProduitComponent } from './produit/produit.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SidebarComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ProduitComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
