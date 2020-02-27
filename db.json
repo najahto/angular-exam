@@ -1,0 +1,83 @@
+{
+  "Produit": [
+    {
+      "id": 1,
+      "nom ": "test",
+      "nom cour": "tspr",
+      "prix de bas": 565468,
+      "prix de vente": 800000,
+      "remise": "10%",
+      "unité": "T",
+      "image": "url",
+      "quantite initial": 40,
+      "quantite en stock": 60
+    },
+    {
+      "id": 3,
+      "nom ": "test",
+      "nom cour": "tspr",
+      "prix de bas": 565468,
+      "prix de vente": 800000,
+      "remise": "10%",
+      "unité": "T",
+      "image": "url",
+      "quantite initial": 40,
+      "quantite en stock": 60
+    }
+   
+  ],
+  "Fournisseur": [
+    {
+      "id": 1,
+      "nom": "omar",
+      "nom court":"ttt",
+      "ville":"dttt",
+      "adresse":"dqsdqs",
+      "tel":"0646565646",
+      "Fax":"dqsdq",
+      "email":"aqzfdaz@azfs.com"
+     
+    },
+    {
+      "id": 2,
+      "nom": "ddda",
+      "nom court":"tsdtt",
+      "ville":"dtsdtt",
+      "adresse":"dqsdqs",
+      "tel":"064656665646",
+      "Fax":"qsdqsdqs",
+      "email":"aqdddddaz@azfs.com"
+     
+    }
+    
+  ],
+  "Client": [
+    {
+      "id": 1,
+      "nom": "omar",
+      "prenom":"ttt",
+      "status":"dttt",
+      "photo":"dqsdqs",
+      "tel":"0646565646",
+      "email":"aqzfdaz@azfs.com",
+      "adress":"aqzfdazqsdqszfsqsdqs",
+      "Ville":"test"
+     
+    },
+    {
+      "id": 2,
+      "nom": "omaddr",
+      "prenom":"ttqqt",
+      "status":"dtssqtt",
+      "photo":"qqqqq",
+      "tel":"06464565646",
+      "email":"faqzfggdaz@azfs.com",
+      "adress":"atesttqzfdazqsdqszfsqsdqs",
+      "Ville":"test2"
+     
+    }
+    
+    
+  ]
+
+}
