@@ -10,10 +10,11 @@ import { ProduitServiceService } from '../services/produit-service.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  listData =new MatTableDataSource<Produit>();
-  displayedColumns: string[] = ['nom', 'nom_court', 'prix_de_bas', 'prix_de_vente', 'remise', 'quantite_initial', 'quantite_en_stock', 'Actions'];
-
-  constructor( private service : ProduitServiceService,private router:Router) { }
+  listData : Produit[] = [];
+  
+  constructor( private service : ProduitServiceService,private router:Router) { 
+    this.fetchElements();
+  }
 
   ngOnInit() {
     this.fetchElements();
@@ -24,19 +25,21 @@ export class ProductListComponent implements OnInit {
       res => {
         if (!res) return;
         console.log(res);
-        this.listData = new MatTableDataSource(res as any);
+        this.listData = res;
         
       }
     )
 
   }
+ 
   onEdit(row){
-    this.service.populate(row);
+    this.service.setter(row);
+    // this.service.populate(row);
     this.router.navigateByUrl('/editproduct');
     // this.service.updateEmployee(row);
   }
-  onDelete(row){
-    this.service.deleteProduct(row).subscribe((res)=>{
+  onDelete(id){
+    this.service.deleteProduct(id).subscribe((res)=>{
       console.log(res);
       // let index = this.ListEmployees['data'].indexOf(row);
       // this.ListEmployees['data'].splice(index, 1);
@@ -44,9 +47,11 @@ export class ProductListComponent implements OnInit {
       this.fetchElements();
     });
   }
-  applyFilter(filterValue: string) {
-    this.listData.filter = filterValue.trim().toLowerCase();
-  }
 
+  addProduct(){
+    let p : Produit;
+    this.service.setter(p);
+    this.router.navigateByUrl('/addproduct');
+  }
 
 }

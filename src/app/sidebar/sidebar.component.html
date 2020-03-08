@@ -1,8 +1,22 @@
-<div class="bg-light border-right" id="sidebar-wrapper">
-    
-    <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light" routerLink="/listproduct">List produit</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light" routerLink="/addproduct"> add Produit</a>
-       
-    </div>
+<div id="sidebar">
+  <header>
+    <a href="#">SmartVentes</a>
+  </header>
+  <ul class="nav">
+    <li>
+      <a routerLink="/listproduct">
+        <i class="zmdi zmdi-view-dashboard" ></i> Produit
+      </a>
+    </li>
+    <li>
+      <a routerLink="/listfornisseurs">
+      <i class="zmdi zmdi-link"></i> Fournisseur
+      </a>
+    </li>
+    <li>
+      <a routerLink="/listclients">
+      <i class="zmdi zmdi-widgets"></i> Client
+      </a>
+    </li>
+  </ul>
 </div>

@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <h3>List des clients</h3>
+  <div class="text-right">
+    <button (click)='addClient()' class="btn btn-primary">Ajouter Client</button>
+  </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">nom</th>
+          <th scope="col">prenom</th>
+          <th scope="col">status</th>
+          <th scope="col">Tel Client</th>
+          <th scope="col">email</th>
+          <th scope="col">ville</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let c of listData'>
+          <td scope="row">{{ c.nom }}</td>
+          <td scope="col">{{ c.prenom }}</td>
+          <td scope="col">{{ c.status }} </td>
+          <td scope="col">{{ c.telC }}</td>
+          <td scope="col">{{ c.emailC }}</td>
+          <td scope="col">{{ c.villeC }}</td>
+          <td>
+              <button type="button" class="btn btn-default" (click)="onEdit(c)">Edit</button>  
+              <button type="button" class="btn btn-danger" (click)="onDelete(c.id)">delete</button>  
+          </td>
+        </tr>
+      </tbody>
+    </table> 
+  </div>  

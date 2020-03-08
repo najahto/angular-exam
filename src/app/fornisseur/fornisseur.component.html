@@ -1,0 +1,68 @@
+<div class="container-fluid">
+    <h3>Fornisseur</h3>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="nom_produit">nom fornissuer :</label>
+            <div class="col-sm-10">
+                <input type="text" [(ngModel)]="fornisseur.nomF" class="form-control" id="nomF"
+                    placeholder="nom fornissuer" name="nomF">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="nom_courtF">nom court :</label>
+            <div class="col-sm-10">
+                <input type="text" [(ngModel)]="fornisseur.nom_courtF" class="form-control" id="nom_courtF"
+                    placeholder="nom court" name="nom_courtF">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="prix_de_bas">ville :</label>
+            <div class="col-sm-10">
+                <input type="text" [(ngModel)]="fornisseur.villeF" class="form-control" id="villeF" placeholder="Ville"
+                    name="villeF">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="adressF">adresse :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" [(ngModel)]="fornisseur.adressF" id="adressF"
+                    placeholder="adresse" name="adressF">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="image">Tel Fix:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" [(ngModel)]="fornisseur.telFix" id="telFix"
+                    placeholder="Tel Fix" name="telFix">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="telMobile">Tel Mobile :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" [(ngModel)]="fornisseur.telMobile" id="telMobile"
+                    placeholder="Tel Mobile" name="telMobile">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="unite">fax :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" [(ngModel)]="fornisseur.fax" id="fax" placeholder="fax"
+                    name="fax">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="emailF">email :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" [(ngModel)]="fornisseur.emailF" id="emailF" placeholder="email"
+                    name="emailF">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" (click)="onSubmit()" class="btn btn-primary">Valider</button>
+                <button type="reset" class="btn btn-default">Vider</button>
+            </div>
+
+        </div>
+    </form>
+</div>

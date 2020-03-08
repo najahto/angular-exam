@@ -1,54 +1,66 @@
 <div class="container-fluid">
-    <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
-        <mat-grid-list cols="1" rowHeight="500px">
-           
-            <mat-grid-tile>
-                <div class="controles-container">
-                    <input type="hidden" name="id" formControlName="id">
-                        <mat-form-field>
-                            <input name="nom" formControlName="nom" matInput  placeholder="nom">
-                            <mat-error>this field is mandatory</mat-error>
-                        </mat-form-field>
-                        <mat-form-field>
-                            <input name="nom_court" formControlName="nom_court" matInput  placeholder="nom court">
-                            <mat-error>this field is mandatory</mat-error>
-                        </mat-form-field>
-                        <mat-form-field>
-                            <input name="prix_de_bas" formControlName="prix_de_bas" matInput  placeholder="prix de base">
-                            <mat-error>this field is mandatory</mat-error>
-                        </mat-form-field>
-                        <mat-form-field>
-                            <input name="prix_de_vente" formControlName="prix_de_vente" matInput  placeholder="prix de vente">
-                        </mat-form-field>
-                        <mat-form-field>
-                            <input name="image" formControlName="image" matInput  placeholder="image">
-                        </mat-form-field>
-                         <div class="controles-container">
-                    
-                        <mat-form-field>
-                            <input name="remise" formControlName="remise" matInput  placeholder="remise">
-                        </mat-form-field>
-                       
-                    <mat-form-field>
-                        <input name="un" formControlName="unite" matInput  placeholder="Unite">
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input name="quantite_initial" formControlName="quantite_initial" matInput  placeholder="quantite initial">
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input name="quantite_en_stock" formControlName="quantite_en_stock" matInput  placeholder="quantite en stock">
-                    </mat-form-field>
-                        <div  class="button-row">
-                            <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button>
-                            <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
-                        </div>
-                </div>
-                </div>
-            </mat-grid-tile>
-           
-               
-            
-          </mat-grid-list>
+    <h3>Produit</h3>
+    <form  class="form-horizontal" >
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="nom_produit">nom produit :</label>
+        <div class="col-sm-10">
+          <input type="text" [(ngModel)]="produit.nom" class="form-control" id="nom_produit" placeholder="nom produit" name="nom_produit">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="nom_court">nom court :</label>
+        <div class="col-sm-10">
+          <input type="text" [(ngModel)]="produit.nom_court" class="form-control" id="nom_court" placeholder="nom court" name="nom_court">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="prix_de_bas">prix de bas :</label>
+        <div class="col-sm-10">
+          <input type="text" [(ngModel)]="produit.prix_de_bas" class="form-control" id="prix_de_bas" placeholder="prix de bas" name="prix_de_bas">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="prix_de_vente">prix de vente :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" [(ngModel)]="produit.prix_de_vente" id="prix_de_vente" placeholder="prix de vente" name="prix_de_vente">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="image">image :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" [(ngModel)]="produit.image" id="image" placeholder="image url" name="image">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="image">remise :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" [(ngModel)]="produit.remise" id="remise"  placeholder="remise" name="remise">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="unite">unite :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" [(ngModel)]="produit.unite" id="unite" placeholder="unite" name="unite">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="quantite_initial">quantite initial :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" [(ngModel)]="produit.quantite_initial" id="quantite_initial" placeholder="quantite initial" name="quantite_initial">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="quantite_en_stock">quantite en stock :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" [(ngModel)]="produit.quantite_en_stock" id="quantite_en_stock" placeholder="quantite en stock" name="quantite_en_stock">
+        </div>
+      </div>
+      <div class="form-group">        
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" (click)="onSubmit()" class="btn btn-primary">Valider</button>
+          <button type="reset" class="btn btn-default">Vider</button>
+        </div>
+        
+      </div>
     </form>
-    </div>
-    
+  </div>

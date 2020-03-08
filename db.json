@@ -1,86 +1,40 @@
 {
   "Produit": [
     {
-      "id": 5,
-      "nom": "sssssssssss",
-      "nom_court": "ssssssss",
-      "prix_de_bas": "sssssssss",
-      "prix_de_vente": "s",
-      "remise": "",
-      "unite": "",
-      "image": "",
-      "quantite_initial": "",
-      "quantite_en_stock": ""
-    },
-    {
-      "id": 6,
-      "nom": "ssssssssssssss",
-      "nom_court": "ssssssssss",
-      "prix_de_bas": "ssssssssssssssss",
-      "prix_de_vente": "ss",
-      "remise": "",
-      "unite": "",
-      "image": "",
-      "quantite_initial": "",
-      "quantite_en_stock": ""
-    },
-    {
-      "id": 7,
-      "nom": "qsdqsdqs",
-      "nom_court": "qsdqsdqsdqq",
-      "prix_de_bas": "qsdqsd",
-      "prix_de_vente": "dqsd",
-      "remise": "dfgdfg",
-      "unite": "",
-      "image": "dfgsssssssssssss",
-      "quantite_initial": "fgddfg",
-      "quantite_en_stock": ""
-    },
-    {
-      "id": 8,
-      "nom": "qqqqqqqqqqqqqqqqqqqqq",
-      "nom_court": "qqqqqqqqqqqqqq",
-      "prix_de_bas": "qqqqqqqqqqqqqqq",
-      "prix_de_vente": "qqqqqqqqqq",
-      "remise": null,
-      "unite": null,
-      "image": "qqqqqqqqq",
-      "quantite_initial": null,
-      "quantite_en_stock": null
-    },
-    {
-      "id": 9,
-      "nom": "PPPPP",
-      "nom_court": "test",
-      "prix_de_bas": "5454",
-      "prix_de_vente": "545454",
-      "remise": "%10",
-      "unite": null,
-      "image": "15415",
-      "quantite_initial": null,
-      "quantite_en_stock": null
+      "id": 10,
+      "nom": "dqsd",
+      "nom_court": "dqsdqs",
+      "prix_de_bas": "654",
+      "prix_de_vente": "245",
+      "unite": "dsq",
+      "remise": "sqd",
+      "image": "qsdqs",
+      "quantite_initial": "66",
+      "quantite_en_stock": "55"
     }
   ],
   "Fournisseur": [
     {
-      "id": 1,
-      "nom": "omar",
-      "nom court": "ttt",
-      "ville": "dttt",
-      "adresse": "dqsdqs",
-      "tel": "0646565646",
-      "Fax": "dqsdq",
-      "email": "aqzfdaz@azfs.com"
+      "id": 3,
+      "nomF": "tt",
+      "nom_courtF": "tt",
+      "villeF": "tt",
+      "adressF": "ttt",
+      "telFix": "tt",
+      "telMobile": null,
+      "fax": "",
+      "emailF": "tttt"
     },
     {
-      "id": 2,
-      "nom": "ddda",
-      "nom court": "tsdtt",
-      "ville": "dtsdtt",
-      "adresse": "dqsdqs",
-      "tel": "064656665646",
-      "Fax": "qsdqsdqs",
-      "email": "aqdddddaz@azfs.com"
+      "id": 5,
+      "nomF": "vvvvvvv",
+      "nom_courtF": "vvvvvvvvvv",
+      "villeF": "vvvvvvvv",
+      "adressF": "vvvvvvv",
+      "telFix": "vvvvvvvvvv",
+      "telMobile": null,
+      "fax": "",
+      "emailF": "vvvvvvvvvvv"
     }
   ],
   "Client": [
@@ -93,18 +47,22 @@
       "tel": "0646565646",
       "email": "aqzfdaz@azfs.com",
       "adress": "aqzfdazqsdqszfsqsdqs",
-      "Ville": "test"
+      "Ville": "test",
+      "telC": "ddd",
+      "emailC": "dddd",
+      "adresseC": "ddd",
+      "villeC": "dd"
     },
     {
-      "id": 2,
-      "nom": "omaddr",
-      "prenom": "ttqqt",
-      "status": "dtssqtt",
-      "photo": "qqqqq",
-      "tel": "06464565646",
-      "email": "faqzfggdaz@azfs.com",
-      "adress": "atesttqzfdazqsdqszfsqsdqs",
-      "Ville": "test2"
+      "id": 3,
+      "nom": "qqqqqqqqq",
+      "prenom": "qqqqqqqq",
+      "status": "qqqqqqqqqqq",
+      "photo": "qqqqqqqqqqqq",
+      "telC": "535123132",
+      "emailC": "qqqqqqq",
+      "adresseC": "qqqqq",
+      "villeC": "qqqqqq"
     }
   ]
 }

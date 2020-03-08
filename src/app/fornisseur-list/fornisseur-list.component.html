@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <h3>List des Fornisseur</h3>
+    <div class="text-right">
+        <button routerLink='/addfornisseur' class="btn btn-primary">Ajouter Fornisseur</button>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">nom fornissuer</th>
+                <th scope="col">nom court</th>
+                <th scope="col">ville</th>
+                <th scope="col">adresse</th>
+                <th scope="col">Tel Fix</th>
+                <th scope="col">email</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let f of listData'>
+                <td scope="row">{{ f.nomF }}</td>
+                <td scope="col">{{ f.nom_courtF }}</td>
+                <td scope="col">{{ f.villeF }} </td>
+                <td scope="col">{{ f.adressF }}</td>
+                <td scope="col">{{ f.telFix }}</td>
+                <td scope="col">{{ f.emailF }}</td>
+                <td>
+                    <button type="button" class="btn btn-default" (click)="onEdit(f)">Edit</button>
+                    <button type="button" class="btn btn-danger" (click)="onDelete(f.id)">delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
