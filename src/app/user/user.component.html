@@ -1,0 +1,68 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">Home</li>
+    <li class="breadcrumb-item ">Ajouter Utilisateur</li>
+</ol>
+<div id="panel" class="panel panel-default">
+    <div class="panel-heading">
+        <h4>Utilisateur</h4>
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal">
+            <div class="form-group">
+
+                <label class="control-label col-sm-2" for="identifiant">Identifiant :</label>
+                <div class="col-sm-10">
+                    <input type="text" [(ngModel)]="user.identifiant" class="form-control" id="identifiant"
+                        placeholder="Identifiant" name="identifiant">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="profil">Profile :</label>
+                <div class="col-sm-10">
+                    <select class="form-control custom-select" name="profil" id="profil" [(ngModel)]="user.profil">
+                        <option value="" disabled selected>selectionner le profile d'utilisateur</option>
+                        <option *ngFor="let p of profils" value="{{ p }}">
+                            {{ p }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="date_creation">Date création</label>
+                <div class="col-sm-10">
+                    <input type="date" [(ngModel)]="user.date_creation" name="date_creation" class="form-control"
+                        id="date_creation" placeholder="date creation">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="date_fin">Date fin</label>
+                <div class="col-sm-10">
+                    <input type="date" [(ngModel)]="user.date_fin" name="date_fin" class="form-control" id="date_fin"
+                        placeholder="date_fin">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pb">Photo</label>
+                <div class="col-sm-10">
+                    <input type="text" [(ngModel)]="user.photo" name="photo" class="form-control" id="photo"
+                        placeholder="photo url">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" [(ngModel)]="user.email" name="email" class="form-control" id="email"
+                        placeholder="email">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" (click)="onSubmit()"
+                        class="btn btn-primary">Valider</button>
+                    <button type="reset" class="btn btn-default">Vider</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>

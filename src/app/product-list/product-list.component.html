@@ -1,34 +1,50 @@
-<div class="container-fluid">
-  <h3>List des produits</h3>
-<div class="text-right">
-  <button (click)='addProduct()' class="btn btn-primary">Ajouter Produit</button>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Home</li>
+  <li class="breadcrumb-item ">Produits</li>
+</ol>
+<div class="tab" role="tabpanel">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Section 1</a></li>
+      <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Section 2</a></li>
+      <li role="presentation"><a href="#Section3" routerLink="/listfornisseurs" aria-controls="messages" role="tab" data-toggle="tab">Section 3</a></li>
+      <li role="presentation"><a href="#Section4" aria-controls="messages" role="tab" data-toggle="tab">Section 4</a></li>
+  </ul>
 </div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">nom</th>
-        <th scope="col">nom court</th>
-        <th scope="col">prix de bas</th>
-        <th scope="col">remise</th>
-        <th scope="col">quantite initial</th>
-        <th scope="col">quantite en stock</th>
-        <th scope="col">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor='let p of listData'>
-        <td scope="row">{{ p.nom }}</td>
-        <td scope="col">{{ p.nom_court }}</td>
-        <td scope="col">{{ p.prix_de_vente }} </td>
-        <td scope="col">{{ p.remise }}</td>
-        <td scope="col">{{ p.quantite_initial }}</td>
-        <td scope="col">{{ p.quantite_en_stock }}</td>
-        <td>
-            <button type="button" class="btn btn-default" (click)="onEdit(p)">Edit</button>  
-            <button type="button" class="btn btn-danger" (click)="onDelete(p.id)">delete</button>  
-        </td>
-      </tr>
-   
-    </tbody>
-  </table> 
-</div>  
+<div id="panel" class="panel panel-default">
+  <div class="panel-heading">
+    <h4>List des produits</h4>
+  </div>
+  <div class="panel-body">
+    <div class="text-right">
+      <button (click)='addProduct()' class="btn btn-primary">Ajouter Produit</button>
+    </div>
+    <table class="table table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">nom</th>
+          <th scope="col">nom court</th>
+          <th scope="col">prix de bas</th>
+          <th scope="col">remise</th>
+          <th scope="col">quantite initial</th>
+          <th scope="col">quantite en stock</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let p of listData'>
+          <td scope="row">{{ p.nom }}</td>
+          <td scope="col">{{ p.nom_court }}</td>
+          <td scope="col">{{ p.prix_de_vente }} </td>
+          <td scope="col">{{ p.remise }}</td>
+          <td scope="col">{{ p.quantite_initial }}</td>
+          <td scope="col">{{ p.quantite_en_stock }}</td>
+          <td>
+            <button id="editbutton" type="button" class="btn btn-default" (click)="onEdit(p)">Edit</button>
+            <button type="button" class="btn btn-danger" (click)="onDelete(p.id)">delete</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>

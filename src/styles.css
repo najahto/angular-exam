@@ -89,3 +89,37 @@ body {
 .breadcrumb-item{
   color: white;
 }
+#panel{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+#editbutton{
+  margin-right: 5px !important;
+}
+
+.tab  .nav-tabs{
+  border-bottom: 1px solid transparent;
+  margin-bottom:1px;
+}
+.tab .nav-tabs > li{
+  padding:0 20px;
+}
+.tab .nav-tabs > li a {
+  font-size:14px;
+  color:#808080;
+}
+.tab .nav-tabs > li a:hover,
+.tab .nav-tabs > li.active > a{
+  background:#fff;
+  color: #FFAA56;
+  padding-bottom:5px;
+  border:1px solid transparent;
+  border-bottom:2px solid #FFAA56;
+}
+.tab .tab-content{
+  color:#5a5c5d;
+  padding: 20px;
+}
+@media only screen and (max-width: 480px){
+  .tab .nav-tabs > li{ width:100%; }
+}

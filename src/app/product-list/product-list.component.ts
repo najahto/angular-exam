@@ -41,9 +41,6 @@ export class ProductListComponent implements OnInit {
   onDelete(id){
     this.service.deleteProduct(id).subscribe((res)=>{
       console.log(res);
-      // let index = this.ListEmployees['data'].indexOf(row);
-      // this.ListEmployees['data'].splice(index, 1);
-      // this.ListEmployees._updateChangeSubscription();
       this.fetchElements();
     });
   }

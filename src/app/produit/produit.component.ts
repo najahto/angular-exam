@@ -24,7 +24,6 @@ export class ProduitComponent implements OnInit {
     console.log(this.produit.id);
     if(this.produit.id == undefined) {
       console.log("new instance");
-      
        this.service.insertProduct(this.produit).subscribe((res) => {
          console.log(res);
        });

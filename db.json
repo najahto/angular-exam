@@ -62,7 +62,27 @@
       "telC": "535123132",
       "emailC": "qqqqqqq",
       "adresseC": "qqqqq",
-      "villeC": "qqqqqq"
+      "villeC": "vvv"
+    }
+  ],
+  "Users": [
+    {
+      "id": 1,
+      "identifiant": "omar",
+      "profil": "editor",
+      "date_creation": "01/01/2017",
+      "date_fin": "01/01/2021",
+      "photo": "test",
+      "email": "aqzfdaz@azfs.com"
+    },
+    {
+      "identifiant": "test",
+      "date_creation": "2020-03-14",
+      "photo": "ttttt",
+      "date_fin": "2020-03-28",
+      "email": "omargreenois4@gmail.com",
+      "profil": "ADMIN",
+      "id": 2
     }
   ]
 }

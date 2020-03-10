@@ -15,6 +15,8 @@ import { FornisseurComponent } from './fornisseur/fornisseur.component';
 import { FornisseurListComponent } from './fornisseur-list/fornisseur-list.component';
 import { ClientComponent } from './client/client.component';
 import { ClientListComponent } from './client-list/client-list.component';
+import { UserComponent } from './user/user.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ClientListComponent } from './client-list/client-list.component';
     FornisseurComponent,
     FornisseurListComponent,
     ClientComponent,
-    ClientListComponent
+    ClientListComponent,
+    UserComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,

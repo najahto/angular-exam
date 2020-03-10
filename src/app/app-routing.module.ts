@@ -1,3 +1,4 @@
+import { UserListComponent } from './user-list/user-list.component';
 import { FornisseurComponent } from './fornisseur/fornisseur.component';
 import { FornisseurListComponent } from './fornisseur-list/fornisseur-list.component';
 
@@ -7,6 +8,7 @@ import { ProduitComponent } from './produit/produit.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ClientListComponent } from './client-list/client-list.component';
 import { ClientComponent } from './client/client.component';
+import { UserComponent } from './user/user.component';
 
 
 const routes: Routes =[
@@ -20,6 +22,9 @@ const routes: Routes =[
     { path: 'listclients',  component: ClientListComponent},
     { path: 'addclient',  component: ClientComponent},
     { path: 'editclient',  component: ClientComponent},
+    { path: 'listusers',  component: UserListComponent},
+    { path: 'adduser',  component: UserComponent},
+    { path: 'edituser',  component: UserComponent},
     
 ];
 
