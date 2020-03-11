@@ -3,7 +3,7 @@ import { FornisseurComponent } from './fornisseur/fornisseur.component';
 import { FornisseurListComponent } from './fornisseur-list/fornisseur-list.component';
 
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/Router';
+import { Routes, RouterModule } from '@angular/router';
 import { ProduitComponent } from './produit/produit.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ClientListComponent } from './client-list/client-list.component';
@@ -25,7 +25,7 @@ const routes: Routes =[
     { path: 'listusers',  component: UserListComponent},
     { path: 'adduser',  component: UserComponent},
     { path: 'edituser',  component: UserComponent},
-    
+
 ];
 
 
