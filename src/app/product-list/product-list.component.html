@@ -5,10 +5,15 @@
 <div class="tab" role="tabpanel">
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Section 1</a></li>
-      <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Section 2</a></li>
-      <li role="presentation"><a href="#Section3" routerLink="/listfornisseurs" aria-controls="messages" role="tab" data-toggle="tab">Section 3</a></li>
-      <li role="presentation"><a href="#Section4" aria-controls="messages" role="tab" data-toggle="tab">Section 4</a></li>
+    <li role="presentation" routerLink="/listproduct" [routerLinkActive]="['active']">
+      <a aria-controls="home" role="tab" data-toggle="tab">Produit</a>
+    </li>
+    <li role="presentation" routerLink="/listfornisseurs" >
+      <a aria-controls="home" role="tab" data-toggle="tab">Fornisseur</a>
+    </li>
+    <li role="presentation" routerLink="/listclients" >
+      <a aria-controls="home" role="tab" data-toggle="tab">Client</a>
+    </li>
   </ul>
 </div>
 <div id="panel" class="panel panel-default">
@@ -17,7 +22,7 @@
   </div>
   <div class="panel-body">
     <div class="text-right">
-      <button (click)='addProduct()' class="btn btn-primary">Ajouter Produit</button>
+      <button id="addbtn" routerLink="/addproduct" class="btn btn-primary">Ajouter Produit</button>
     </div>
     <table class="table table table-bordered">
       <thead>
@@ -40,8 +45,8 @@
           <td scope="col">{{ p.quantite_initial }}</td>
           <td scope="col">{{ p.quantite_en_stock }}</td>
           <td>
-            <button id="editbutton" type="button" class="btn btn-default" (click)="onEdit(p)">Edit</button>
-            <button type="button" class="btn btn-danger" (click)="onDelete(p.id)">delete</button>
+            <button id="editbutton" type="button" class="btn btn-default btn-sm" (click)="onEdit(p)">Edit</button>
+            <button type="button" class="btn btn-danger btn-sm" (click)="onDelete(p.id)">delete</button>
           </td>
         </tr>
 

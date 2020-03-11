@@ -89,6 +89,13 @@ body {
 .breadcrumb-item{
   color: white;
 }
+
+#addbtn{
+  margin-bottom: 10px !important;
+}
+#validerbtn{
+  margin-right: 5px;
+}
 #panel{
     margin-right: 20px;
     margin-left: 20px;

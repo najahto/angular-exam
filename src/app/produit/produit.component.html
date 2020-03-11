@@ -2,6 +2,20 @@
   <li class="breadcrumb-item">Home</li>
   <li class="breadcrumb-item ">Ajouter produit</li>
 </ol>
+<div class="tab" role="tabpanel">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" routerLink="/listproduct" [routerLinkActive]="['active']">
+      <a aria-controls="home" role="tab" data-toggle="tab">Produit</a>
+    </li>
+    <li role="presentation" routerLink="/listfornisseurs" >
+      <a aria-controls="home" role="tab" data-toggle="tab">Fornisseur</a>
+    </li>
+    <li role="presentation" routerLink="/listclients" >
+      <a aria-controls="home" role="tab" data-toggle="tab">Client</a>
+    </li>
+  </ul>
+</div>
 <div id="panel" class="panel panel-default">
   <div class="panel-heading"><h4>Produit</h4></div>
   <div class="panel-body">
@@ -62,7 +76,7 @@
       </div>
       <div class="form-group">        
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" (click)="onSubmit()" class="btn btn-primary">Valider</button>
+          <button type="submit" id="validerbtn" (click)="onSubmit()" class="btn btn-primary">Valider</button>
           <button type="reset" class="btn btn-default">Vider</button>
         </div>
         

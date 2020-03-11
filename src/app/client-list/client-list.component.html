@@ -2,13 +2,27 @@
   <li class="breadcrumb-item">Home</li>
   <li class="breadcrumb-item ">Clients</li>
 </ol>
+<div class="tab" role="tabpanel">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" routerLink="/listproduct">
+      <a aria-controls="home" role="tab" data-toggle="tab">Produit</a>
+    </li>
+    <li role="presentation" routerLink="/listfornisseurs" >
+      <a aria-controls="home" role="tab" data-toggle="tab">Fornisseur</a>
+    </li>
+    <li role="presentation" routerLink="/listclients" [routerLinkActive]="['active']">
+      <a aria-controls="home" role="tab" data-toggle="tab">Client</a>
+    </li>
+  </ul>
+</div>
 <div id="panel" class="panel panel-default">
   <div class="panel-heading">
     <h4>List des clients</h4>
   </div>
   <div class="panel-body">
     <div class="text-right">
-      <button (click)='addClient()' class="btn btn-primary">Ajouter Client</button>
+      <button id="addbtn" routerLink="/addclient" class="btn btn-primary">Ajouter Client</button>
     </div>
     <table class="table table-bordered">
       <thead>

@@ -5,8 +5,13 @@
   <div class="tab" role="tabpanel">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Utilisateurs</a></li>
-        <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Ajouter utilisateur</a></li>
+        <li role="presentation" routerLink="/listusers" [routerLinkActive]="['active']">
+          <a aria-controls="home" role="tab" data-toggle="tab">Utilisateurs</a>
+        </li>
+        <li role="presentation" routerLink="/adduser" >
+          <a aria-controls="home" role="tab" data-toggle="tab">Ajouter utilisateur</a>
+        </li>
+       
     </ul>
   </div>
   <div id="panel" class="panel panel-default">
@@ -15,7 +20,7 @@
     </div>
     <div class="panel-body">
       <div class="text-right">
-        <button routerLink="/adduser" class="btn btn-primary">Ajouter Utilisateur</button>
+        <button id="addbtn" routerLink="/adduser" class="btn btn-primary">Ajouter Utilisateur</button>
       </div>
       <table class="table table table-bordered">
         <thead>
@@ -25,6 +30,7 @@
             <th scope="col">Date création</th>
             <th scope="col">Date Fin</th>
             <th scope="col">photo</th>
+            <th scope="col">email</th>            
             <th scope="col">Actions</th>
           </tr>
         </thead>
@@ -35,6 +41,7 @@
             <td scope="col">{{ u.date_creation }} </td>
             <td scope="col">{{ u.date_fin }}</td>
             <td scope="col">{{ u.photo }}</td>
+            <td scope="col">{{ u.email }}</td>
             <td>
               <button id="editbutton" type="button" class="btn btn-default" (click)="onEdit(u)">Edit</button>
               <button type="button" class="btn btn-danger" (click)="onDelete(u)">delete</button>

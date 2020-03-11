@@ -1,14 +1,28 @@
 <ol class="breadcrumb">
     <li class="breadcrumb-item">Home</li>
     <li class="breadcrumb-item ">fournisseurs</li>
-  </ol>
+</ol>
+<div class="tab" role="tabpanel">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" routerLink="/listproduct">
+            <a aria-controls="home" role="tab" data-toggle="tab">Produit</a>
+        </li>
+        <li role="presentation" routerLink="/listfornisseurs" [routerLinkActive]="['active']">
+            <a aria-controls="home" role="tab" data-toggle="tab">Fornisseur</a>
+        </li>
+        <li role="presentation" routerLink="/listclients">
+            <a aria-controls="home" role="tab" data-toggle="tab">Client</a>
+        </li>
+    </ul>
+</div>
 <div id="panel" class="panel panel-default">
     <div class="panel-heading">
         <h4>List des fournisseurs</h4>
     </div>
     <div class="panel-body">
         <div class="text-right">
-            <button routerLink='/addfornisseur' class="btn btn-primary">Ajouter Fornisseur</button>
+            <button id="addbtn" routerLink='/addfornisseur' class="btn btn-primary">Ajouter Fornisseur</button>
         </div>
         <table class="table table table-bordered">
             <thead>
@@ -31,8 +45,8 @@
                     <td scope="col">{{ f.telFix }}</td>
                     <td scope="col">{{ f.emailF }}</td>
                     <td>
-                        <button id="editbutton" type="button" class="btn btn-default" (click)="onEdit(f)">Edit</button>
-                        <button type="button" class="btn btn-danger" (click)="onDelete(f.id)">delete</button>
+                        <button id="editbutton" type="button" class="btn btn-default btn-sm" (click)="onEdit(f)">Edit</button>
+                        <button type="button" class="btn btn-danger btn-sm" (click)="onDelete(f.id)">delete</button>
                     </td>
                 </tr>
             </tbody>
