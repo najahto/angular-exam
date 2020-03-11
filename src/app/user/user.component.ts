@@ -1,4 +1,4 @@
-import { Router } from '@angular/Router';
+import { Router } from '@angular/router';
 import { UserServiceService } from './../services/user-service.service';
 import { User } from './../Modules/user/user.module';
 import { Component, OnInit } from '@angular/core';
@@ -9,10 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  private user:User;
+  user:User;
   profils = ['admin', 'user', 'editor'];
-  
-  
+
+
   constructor(private userService: UserServiceService, private router: Router) { }
 
   ngOnInit() {
@@ -29,7 +29,7 @@ export class UserComponent implements OnInit {
     }
     else
     {
-    
+
       this.userService.updateUser(this.user).subscribe(res=>{
         this.router.navigateByUrl('/listusers');
         console.log(res);

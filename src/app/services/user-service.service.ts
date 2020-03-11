@@ -7,8 +7,8 @@ import { Injectable } from '@angular/core';
 })
 export class UserServiceService {
 
-  private Url = "http://localhost:3000/users";
-  private user: User = {
+   Url = "http://localhost:3000/users";
+   user: User = {
     identifiant: '',
     date_creation: null,
     photo: '',
@@ -16,7 +16,7 @@ export class UserServiceService {
     email: '',
     profil: '',
   };
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient) {
   }
   getUsers() {
     return this.http.get<User[]>(this.Url);

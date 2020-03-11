@@ -1,5 +1,5 @@
 import { Fornisseur } from './../Modules/fornisseur/fornisseur.module';
-import { Router } from '@angular/Router';
+import { Router } from '@angular/router';
 import { FornisseurServiceService } from './../services/fornisseur-service.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,13 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FornisseurListComponent implements OnInit {
   listData : Fornisseur[];
-  constructor(private service : FornisseurServiceService, private router : Router) { 
+  constructor(private service : FornisseurServiceService, private router : Router) {
     this.fetchElements();
   }
 
   ngOnInit() {
     this.fetchElements();
-    
+
   }
   fetchElements(){
     this.service.getFornisseurs().subscribe(
@@ -24,7 +24,7 @@ export class FornisseurListComponent implements OnInit {
         if (!res) return;
         console.log(res);
         this.listData = res;
-        
+
       }
     )
 
@@ -32,7 +32,7 @@ export class FornisseurListComponent implements OnInit {
   onEdit(row){
     this.service.setter(row);
     this.router.navigateByUrl('/editfornisseur');
-    
+
   }
   onDelete(id){
     this.service.deleteFornisseur(id).subscribe((res)=>{

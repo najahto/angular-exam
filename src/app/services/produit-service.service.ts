@@ -8,11 +8,11 @@ import { FormGroup, FormControl, Validators } from '@angular/forms'
   providedIn: 'root'
 })
 export class ProduitServiceService {
-  private url = "http://localhost:3000/Produit"
+   url = "http://localhost:3000/Produit"
   constructor(private http: HttpClient) { }
 
   // });
-  private produit:Produit = {
+   produit:Produit = {
     id: null,
     nom: '',
     nom_court: '',
@@ -23,7 +23,7 @@ export class ProduitServiceService {
     image: '',
     quantite_initial: null,
     quantite_en_stock: null,
-};    
+};
 
 getProducts() {
   return this.http.get<Produit[]>(this.url);

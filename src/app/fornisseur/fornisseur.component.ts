@@ -1,5 +1,5 @@
 import { Fornisseur } from './../Modules/fornisseur/fornisseur.module';
-import { Router } from '@angular/Router';
+import { Router } from '@angular/router';
 import { FornisseurServiceService } from './../services/fornisseur-service.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './fornisseur.component.html',
   styleUrls: ['./fornisseur.component.css']
 })
-export class FornisseurComponent implements OnInit { 
+export class FornisseurComponent implements OnInit {
 
   constructor(private service : FornisseurServiceService, private router: Router) {
-    
+
    }
-  private fornisseur : Fornisseur; 
+   fornisseur : Fornisseur;
   ngOnInit() {
     this.service.getFornisseurs();
     this.fornisseur =  this.service.getter();
@@ -22,19 +22,19 @@ export class FornisseurComponent implements OnInit {
     console.log(this.fornisseur.id);
     if(this.fornisseur.id == undefined) {
       console.log("new instance");
-      
+
        this.service.insertFornisseur(this.fornisseur).subscribe((res) => {
          console.log(res);
        });
         this.router.navigateByUrl('/listfornisseurs');
-     
+
     }
     else{
        this.service.updateFornisseur(this.fornisseur).subscribe((res) => {
          console.log(res);
        });
        this.router.navigateByUrl('/listfornisseurs');
-     
+
     }
   }
 }

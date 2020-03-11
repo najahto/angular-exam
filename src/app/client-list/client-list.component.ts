@@ -1,5 +1,5 @@
 import { Client } from './../Modules/client/client.module';
-import { Router } from '@angular/Router';
+import { Router } from '@angular/router';
 import { ClientServiceService } from './../services/client-service.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientListComponent implements OnInit {
   listData : Client[] = [];
-  constructor(private service : ClientServiceService, private router :Router) { 
+  constructor(private service : ClientServiceService, private router :Router) {
     this.fetchElements();
   }
 
@@ -26,7 +26,7 @@ export class ClientListComponent implements OnInit {
       }
     )
   }
- 
+
   onEdit(row){
     this.service.setter(row);
     this.router.navigateByUrl('/editclient');

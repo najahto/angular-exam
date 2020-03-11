@@ -1,18 +1,18 @@
 import { Produit } from './../Modules/produit/produit.module';
-import { Router } from '@angular/Router';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource ,MatPaginator} from '@angular/material';
 import { ProduitServiceService } from '../services/produit-service.service';
 
 @Component({
   selector: 'app-product-list',
-  templateUrl: './product-list.component.html', 
+  templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
   listData : Produit[] = [];
-  
-  constructor( private service : ProduitServiceService,private router:Router) { 
+
+  constructor( private service : ProduitServiceService,private router:Router) {
     this.fetchElements();
   }
 
@@ -26,12 +26,12 @@ export class ProductListComponent implements OnInit {
         if (!res) return;
         console.log(res);
         this.listData = res;
-        
+
       }
     )
 
   }
- 
+
   onEdit(row){
     this.service.setter(row);
     // this.service.populate(row);

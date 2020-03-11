@@ -6,9 +6,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ClientServiceService {
-  private url = 'http://localhost:3000/client';
+   url = 'http://localhost:3000/client';
   constructor(private http: HttpClient) { }
-  private client: Client ={
+   client: Client ={
     id : null,
     nom: '',
     prenom: '',

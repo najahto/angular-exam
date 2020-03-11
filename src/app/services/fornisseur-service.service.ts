@@ -6,10 +6,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class FornisseurServiceService {
-  private url = "http://localhost:3000/Fournisseur"
+   url = "http://localhost:3000/Fournisseur"
   constructor(private http: HttpClient) { }
 
-  private fornissuer: Fornisseur = {
+   fornissuer: Fornisseur = {
     id: null,
     nomF: '',
     nom_courtF: '',
@@ -33,9 +33,9 @@ export class FornisseurServiceService {
   }
   deleteFornisseur(key) {
     return this.http.delete(`${this.url}/${key}`);
-  
+
   }
-  
+
   getter(){
     return this.fornissuer
   }

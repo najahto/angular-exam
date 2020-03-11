@@ -2,7 +2,7 @@ import { Produit } from './../Modules/produit/produit.module';
 import { ProduitServiceService } from './../services/produit-service.service';
 import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { Router } from '@angular/Router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,13 +13,13 @@ import { Router } from '@angular/Router';
 export class ProduitComponent implements OnInit {
 
   constructor( private service : ProduitServiceService, private router: Router) { }
-  private produit:Produit; 
+   produit:Produit;
   ngOnInit() {
     this.service.getProducts();
     this.produit =  this.service.getter();
-   
+
   }
-  
+
   onSubmit(){
     console.log(this.produit.id);
     if(this.produit.id == undefined) {
@@ -30,7 +30,7 @@ export class ProduitComponent implements OnInit {
       //  this.service.form.reset();
       //  this.service.initializeFormGroup();
         this.router.navigateByUrl('/listproduct');
-     
+
     }/*
     */
     else{
@@ -38,10 +38,10 @@ export class ProduitComponent implements OnInit {
          console.log(res);
        });
        this.router.navigateByUrl('/listproduct');
-     
+
     }
   }
- 
+
 }
 
 
